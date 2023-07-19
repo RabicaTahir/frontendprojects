@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --body-bg: hsl(210, 60%, 98%);
+    --board-bg: hsl(0, 0%, 100%);
+    --primary-text: hsl(219, 12%, 42%);
+    --user-name: hsl(224, 21%, 14%);
+    --time-text: hsl(219, 14%, 63%);
+    --count-text: hsl(205, 33%, 90%);
+    --msg-border: hsl(211, 68%, 94%);
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+}
+body{
+    min-height: 100vh;
+    background: var(--body-bg);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body main{
+    max-width: 620px;
+    background: var(--board-bg);
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+}
+main header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+header h1{
+    font-size: 20px;
+}
+header h1 .count{
+    color: var(--count-text);
+    background: var(--blue);
+    border-radius: .5rem;
+    padding: .01rem .5rem;
+}
+header button{
+    color: var(--primary-text);
+    background: transparent;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    color: var(--blue);
+}
+main a{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    line-height: 1.3;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+a.unread{
+    background: var(--body-bg);
+}
+a img{
+    width: 40px;
+    height: 40px;
+}
+a .text-content p{
+    color: var(--primary-text);
+}
+p .user{
+    color: var(--user-name);
+    font-weight: 800;
+    margin-right: .2rem;
+}
+p .activity{
+    font-weight: 800;
+    margin: 0 .2rem;
+}
+p .chess{
+    color: var(--blue);
+}
+p .dot{
+    display: inline-block;
+    background: var(--red);
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    margin-left: .1rem;
+}
+p span:hover{
+    color: var(--blue);
+}
+.text-content .time{
+    color: var(--time-text);
+    margin-top: .1rem;
+}
+.text-content .private{
+    border: 1px solid var(--msg-border);
+    border-radius: .3rem;
+    padding: 1rem;
+    margin-top: .5rem;
+}
+.text-content .private:hover{
+    background: var(--count-text);
+}
+a .picture{
+    margin-left: auto;
+}
+
+
+@media(min-width: 620px){
+    body main{
+        margin: 3rem 0;
+    }
+}
