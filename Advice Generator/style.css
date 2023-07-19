@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: #52ffa8;
+    --Grayish-Blue: #4e5d73;
+    --Dark-Grayish-Blue: #323a49;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+html,
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 0px;
+}
+body{
+    background-color: rgba(13, 12, 14, 0.95);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--Dark-Grayish-Blue);
+    max-width: 550px;
+    width: fit-content;
+    height: fit-content;
+    margin: auto 20px;
+}
+
+.advice-id{
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+    word-spacing: 10px;
+}
+
+.advice-text{
+    margin: 20px auto 0; 
+    font-size: 28px;
+    width: 100%;
+    color: var(--Light-Cyan);
+}
+
+.divider{
+    margin: 20px 0 30px;
+    background-size: 100% 100%;
+    width: 100%;
+}
+#dice{
+    background-color: var(--Neon-Green);
+    border-radius: 50%;
+    padding: 15px 16px 12px;
+    border: 0;
+    cursor: pointer;
+    margin: 0 auto -50px;
+}
+#dice img{
+    width: 23px;
+}
+#dice:hover {
+    box-shadow: 0 0 40px var(--Neon-Green);
+}
+.attribution { 
+    font-size: 0.8rem; 
+    align-self: flex-end;
+    text-align: center;
+    background-color: var(--Dark-Grayish-Blue);
+    padding: 10px;
+    color: var(--Light-Cyan);
+} 
+.attribution a { 
+    color: var(--Neon-Green); 
+}
+
+@media (min-width: 530px) {
+    main{
+        margin: auto;
+    }
+}
