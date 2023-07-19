@@ -1,0 +1,195 @@
+:root {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(0, 0%, 86%);
+  }
+  
+  .visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+  
+  .calculator {
+    border-radius: 1.5rem 1.5rem 10rem 1.5rem;
+    padding: 4rem 3rem;
+    background-color: hsl(0, 0%, 100%);
+  }
+  .calculator__form {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid hsl(0, 0%, 86%);
+  }
+  .calculator__form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .calculator__form-label {
+    margin-bottom: 0.5rem;
+    color: hsl(0, 1%, 44%);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+  .calculator__form .label-error {
+    color: hsl(0, 100%, 67%);
+  }
+  .calculator__form-input {
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    width: 9.5rem;
+    color: hsl(0, 0%, 8%);
+    font: 700 2rem "Poppins", sans-serif;
+    cursor: pointer;
+  }
+  .calculator__form-input::-moz-placeholder {
+    color: hsl(0, 1%, 44%);
+    font: 700 2rem "Poppins", sans-serif;
+  }
+  .calculator__form-input::placeholder {
+    color: hsl(0, 1%, 44%);
+    font: 700 2rem "Poppins", sans-serif;
+  }
+  .calculator__form-input:focus {
+    border: 1px solid hsl(259, 100%, 65%);
+    outline: none;
+    caret-color: hsl(259, 100%, 65%);
+  }
+  .calculator__form-input::-webkit-outer-spin-button, .calculator__form-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .calculator__form .input-error,
+  .calculator__form .input-error:focus {
+    border: 1px solid hsl(0, 100%, 67%);
+  }
+  .calculator__form .show-form-error {
+    display: block;
+  }
+  .calculator__form-btn {
+    position: absolute;
+    right: 0;
+    bottom: -2.5rem;
+    width: 6rem;
+    height: 6rem;
+    border: none;
+    border-radius: 50%;
+    background-color: hsl(259, 100%, 65%);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .calculator__form-btn > img {
+    width: 50%;
+    height: 50%;
+  }
+  .calculator__form-btn:hover {
+    background-color: hsl(0, 0%, 8%);
+  }
+  .calculator__form-error, .calculator__form-error2 {
+    display: none;
+    color: hsl(0, 100%, 67%);
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .calculator__form-error2 {
+    position: absolute;
+    bottom: 1.5rem;
+  }
+  .calculator__form .show-error {
+    display: block;
+  }
+  .calculator__result {
+    padding-top: 2rem;
+  }
+  .calculator__result-value {
+    font-size: 5rem;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+  .calculator__result-value > span {
+    color: hsl(259, 100%, 65%);
+  }
+  
+  @media (max-width: 1000px) {
+    .calculator {
+      width: 90%;
+      margin: auto;
+      border-radius: 1.5rem 1.5rem 7rem 1.5rem;
+    }
+    .calculator__form {
+      gap: 1rem;
+    }
+    .calculator__form-input {
+      width: 7rem;
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+    .calculator__form-input::-moz-placeholder {
+      font-size: 1.5rem;
+    }
+    .calculator__form-input::placeholder {
+      font-size: 1.5rem;
+    }
+    .calculator__form-btn {
+      right: 45%;
+      bottom: -2rem;
+      width: 4rem;
+      height: 4rem;
+    }
+    .calculator__result-value {
+      font-size: 3rem;
+    }
+  }
+  @media (max-width: 500px) {
+    .calculator {
+      padding: 4rem 1.5rem;
+    }
+    .calculator__form-input {
+      width: 5.5rem;
+      padding: 1rem 0 1rem 1rem;
+      font-size: 1.2rem;
+    }
+    .calculator__form-input::-moz-placeholder {
+      font-size: 1.2rem;
+    }
+    .calculator__form-input::placeholder {
+      font-size: 1.2rem;
+    }
+    .calculator__form-btn {
+      right: 40%;
+    }
+  }
