@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+:root {
+  /* Primary colors */
+  --Bright-Blue: hsl(220, 98%, 61%);
+  --Check-Background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Very-Dark-Blue: hsl(235, 21%, 11%);
+  --Light-Grayish-Blue: hsl(234, 39%, 85%);
+  --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+  --Very-Darker-Grayish-Blue: hsl(237, 14%, 26%);
+
+  /* Dark Theme */
+  --body-background: hsl(235, 21%, 11%);
+  --background-image: url('images/bg-desktop-dark.jpg');
+  --input-and-card: hsl(235, 24%, 19%);
+  --text-color: hsl(0, 0%, 98%);
+  --btn-hover-color: hsl(0, 0%, 98%);
+  --ceckbox-border: hsl(0, 0%, 24%);
+  --Grayish-Blue: hsl(235, 19%, 35%);
+  --alert: hsl(230, 38%, 28%);
+  --text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.459), 1px -1px 0 rgba(255, 255, 255, 0.479),
+    -1px 1px 0 rgba(255, 255, 255, 0.473), 1px 1px 0 rgba(255, 255, 255, 0.466);
+  --opacity: 0.1;
+}
+
+[data-theme='light'] {
+  --body-background: hsl(236, 33%, 92%);
+  --background-image: url('images/bg-desktop-light.jpg');
+  --input-and-card: hsl(0, 0%, 98%);
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
+  --text-color: hsl(236, 9%, 61%);
+  --btn-hover-color: hsl(236, 9%, 1%);
+  --ceckbox-border: hsl(0, 0%, 87%);
+  --Grayish-Blue: hsl(236, 33%, 92%);
+  --alert: hsl(253, 68%, 79%);
+  --text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.4), 1px -1px 0 rgba(0, 0, 0, 0.4),
+    -1px 1px 0 rgba(0, 0, 0, 0.4), 1px 1px 0 rgba(0, 0, 0, 0.4);
+  --opacity: 1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: initial;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--Very-Dark-Grayish-Blue);
+  background: var(--body-background);
+  font-size: 1.2rem;
+  min-height: 100vh;
+  margin: 0;
+  user-select: none;
+}
+
+.blue-background-class {
+  background: var(--Bright-Blue);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-right: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--input-and-card);
+}
+
+.header {
+  min-height: 30vh;
+  background: var(--background-image) no-repeat left center/cover;
+  width: 100%;
+}
+
+main {
+  max-width: 540px;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr auto 1fr;
+  column-gap: 1rem;
+  position: relative;
+  bottom: 16rem;
+  padding: 1rem;
+  height: 4rem;
+}
+
+.content {
+  display: grid;
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.content h2 {
+  color: var(--Very-Light-Gray);
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 10px;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.toggle-icon {
+  position: absolute;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.addTodo {
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  background: var(--input-and-card);
+  border-radius: 5px;
+  margin-bottom: 0.1rem;
+  box-shadow: -5px 0 20px 15px rgba(0, 0, 0, 0.2);
+}
+
+.addTodo input {
+  background: var(--input-and-card);
+  border: none;
+  width: 100%;
+  height: 5rem;
+  padding: 0.6rem;
+  border-radius: 5px;
+  outline: none;
+  color: var(--text-color);
+  caret-color: var(--Bright-Blue);
+}
+
+input::placeholder {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+input:focus::placeholder {
+  opacity: 0.2;
+}
+
+.alert {
+  color: var(--alert);
+  margin-top: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: clamp(1.5rem 3vw 2rem);
+  font-weight: 700;
+  text-shadow: var(--text-shadow);
+  display: none;
+}
+
+.card {
+  background: var(--input-and-card);
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  min-height: fit-content;
+  border-radius: 5px;
+  margin-top: 2rem;
+  box-shadow: -5px 0 20px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bottom {
+  display: grid;
+}
+
+.items_left {
+  background: var(--input-and-card);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.p {
+  color: var(--Dark-Grayish-Blue);
+}
+
+.buttons {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: var(--input-and-card);
+  min-width: 100%;
+  width: 100%;
+  padding: 2rem 0.8rem;
+  margin-top: 2rem;
+}
+
+.buttons button {
+  margin-right: 2rem;
+  font-weight: 700;
+}
+
+/* ========================= Buttons ======================== */
+.btn {
+  cursor: pointer;
+  background: inherit;
+  border: none;
+  padding: 0;
+  font-size: 1.3rem;
+  font-family: inherit;
+  color: var(--Dark-Grayish-Blue);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.addNewBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 100%;
+  background: var(--input-and-card);
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.addNewBtn span:hover {
+  border: 1px solid var(--Very-Dark-Blue);
+}
+
+.plusSign {
+  font-size: 1.99rem;
+}
+
+.active {
+  color: var(--Bright-Blue);
+}
+
+.task {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 1.5rem 0.8rem;
+  position: relative;
+}
+
+li::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-top: 6rem;
+  background: var(--Light-Grayish-Blue);
+  height: 1px;
+  opacity: var(--opacity);
+}
+
+.tasks li:hover,
+.tasks li:hover:last-child {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.task:hover:last-child {
+  opacity: unset;
+  cursor: default;
+}
+
+[type='checkbox'] {
+  opacity: 0;
+  position: absolute;
+}
+
+.custom_checkbox {
+  display: inline-block;
+  width: 2.2rem;
+  height: 2.2rem;
+  cursor: pointer;
+  border: 1px solid var(--ceckbox-border);
+  border-radius: 50%;
+  margin-right: 1.2rem;
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
+
+[type='checkbox']:checked + label .custom_checkbox {
+  background-image: url('images/icon-check.svg'), var(--Check-Background);
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: var(--Very-Light-Gray);
+}
+
+[type='checkbox']:checked + label {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.task label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.task {
+  color: var(--text-color);
+}
+
+.delete {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--Grayish-Blue);
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.all:hover,
+.activeBtn:hover,
+.completed:hover,
+.clear:hover {
+  color: var(--btn-hover-color);
+}
+
+
+
+
+@media screen and (min-width: 950px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  .header {
+    min-height: 31vh;
+  }
+
+  main {
+    width: 100%;
+    height: max-content;
+    bottom: 22rem;
+    padding: 0.3rem;
+    height: 3rem;
+  }
+
+  .content_title {
+    font-size: 3.9rem !important;
+    letter-spacing: 12px !important;
+  }
+
+  .theme-switch {
+    height: 3.3rem;
+    width: 2.8rem;
+  }
+
+  .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .addTodo input {
+    margin-top: 2.05rem;
+    height: 5rem;
+    padding-bottom: 2.5rem !important;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  input::placeholder {
+    position: absolute;
+  }
+
+  .plusSign {
+    font-size: 2.1rem;
+  }
+
+  .drag_text {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+  }
+
+  .custom_checkbox {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .delete {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .buttons {
+    margin-top: -7rem;
+    background: 0;
+  }
+
+  .addTodo input {
+    font-size: 1.8rem;
+  }
+
+  .buttons button {
+    margin-right: 2rem;
+    font-weight: 700;
+  }
+
+  .btn {
+    z-index: 100;
+  }
+
+  .clear {
+    z-index: 1000;
+    padding: 0.5rem;
+  }
+
+  .drag_text {
+    margin-bottom: 1.8rem;
+    font-size: 1.4rem;
+  }
+
+  
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+
+    <title>Todo app</title>
+  </head>
+  <body class="body">
+    <div class="header"></div>
+    <main>
+      <div class="content">
+        <h2 class="content_title">TODO</h2>
+        <!--Dark Mode Swich -->
+        <div class="theme-switch-wrapper">
+          <span class="toggle-icon">
+            <img class="icon" src="images/icon-light.svg" alt="" />
+          </span>
+          <label class="theme-switch">
+            <input class="input_darkmode" type="checkbox" />
+          </label>
+        </div>
+      </div>
+
+      <form class="addTodo">
+        <button type="submit" class="btn addNewBtn" aria-label="button">
+          <span class="plusSign custom_checkbox">+</span>
+        </button>
+        <input
+          class="addNew"
+          name="add"
+          type="text"
+          id="create"
+          placeholder="Create a new todo..."
+          aria-label="Create a new todo..."
+        />
+      </form>
+
+      <div class="container">
+        <div class="alert"></div>
+        <div class="card">
+          <div>
+            <ul class="tasks"></ul>
+          </div>
+
+          <div class="task items_left">
+            <p class="counter">5 items left</p>
+            <button class="btn clear">Clear Completed</button>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <div class="buttons filter-todos">
+            <button class="btn all active" value="all">All</button>
+            <button class="btn activeBtn" value="active">Active</button>
+            <button class="btn completed" value="completed">Completed</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <template id="task-template">
+      <li class="task">
+        <input class="task-input" type="checkbox" />
+        <label>
+          <span class="custom_checkbox"></span>
+        </label>
+        <span class="deleteBtn">
+          <img class="delete" src="images/icon-cross.svg" alt="" />
+        </span>
+      </li>
+    </template>
+
+    <script src="dark.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
