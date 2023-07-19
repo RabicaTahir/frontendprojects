@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Social Media Dashboard</title>
+</head>
+<body>
+  <main class="container">
+    <section class="title-section d-flex">
+      <div class="main-text">
+        <h1 class="dashboard-title">Social Media Dashboard</h1>
+        <p class="dashboard-subtitle">Total Followers: 23,004</p>
+      </div>
+      <div class="dark-mode-container">
+        <p class="dark-mode-text">Dark Mode</p>
+        <div class="slider-container">
+          <input type="checkbox" id="toggle-button" class="toggle-button" aria-label="dark mode slider">
+        </div>
+      </div>
+    </section>
+    <section class="dashboard main-grid">
+      <div class="main-card main-card--fb-tw">
+        <div class="icon-container">
+          <img src="./images/icon-facebook.svg" alt="" class="social-icon">
+          <p class="icon-text">@nathanf</p>
+        </div>
+        <p class="followers-num">1987</p>
+        <p class="followers-text">Followers</p>
+        <p class="today-num green">12 Today</p>
+      </div>
+      <div class="main-card main-card--fb-tw">
+        <div class="icon-container">
+          <img src="./images/icon-twitter.svg" alt="" class="social-icon">
+          <p class="icon-text">@nathanf</p>
+        </div>
+        <p class="followers-num">1044</p>
+        <p class="followers-text">Followers</p>
+        <p class="today-num green">99 Today</p>
+      </div>
+      <div class="main-card main-card--insta">
+        <div class="icon-container">
+          <img src="./images/icon-instagram.svg" alt="" class="social-icon">
+          <p class="icon-text">@realnathanf</p>
+        </div>
+        <p class="followers-num">11k</p>
+        <p class="followers-text">Followers</p>
+        <p class="today-num green">1099 Today</p>
+      </div>
+      <div class="main-card main-card--yt">
+        <div class="icon-container">
+          <img src="./images/icon-youtube.svg" alt="" class="social-icon">
+          <p class="icon-text">Nathan F.</p>
+        </div>
+        <p class="followers-num">8239</p>
+        <p class="followers-text">Subscribers</p>
+        <p class="today-num red">144 Today</p>
+      </div>
+    </section>
+    <section class="overview main-grid">
+      <h2 class="subtitle">Overview - Today</h2>
+    </section>
+    
+    <section class="main-grid">
+      <div class="overview-card">
+        <p class="overview-card-label">Page Views</p>
+        <p class="overview-card-num">87</p>
+        <img src="./images/icon-facebook.svg" alt="" class="social-icon overview-icon">
+        <p class="overview-percent green">3%</p> 
+      </div>
+      <div class="overview-card">
+        <p class="overview-card-label">Likes</p>
+        <p class="overview-card-num">52</p>
+        <img src="./images/icon-facebook.svg" alt="" class="social-icon overview-icon">
+        <p class="overview-percent red">2%</p>
+      </div>
+      <div class="overview-card">
+        <p class="overview-card-label">Likes</p>
+        <p class="overview-card-num">5462</p>
+        <img src="./images/icon-instagram.svg" alt="" class="social-icon overview-icon">
+        <p class="overview-percent green">2257%</p>
+      </div>
+      <div class="overview-card">
+        <p class="overview-card-label">Profile Views</p>
+        <p class="overview-card-num">52k</p>
+        <img src="./images/icon-instagram.svg" alt="" class="social-icon overview-icon">
+        <p class="overview-percent green">1375%</p>
+      </div>
+      <div class="overview-card">
+        <p class="overview-card-label">Retweets</p>
+        <p class="overview-card-num">117</p>
+        <img src="./images/icon-twitter.svg" alt="" class="social-icon overview-icon">
+        <p class="overview-percent green">303%</p>
+      </div>
+      <div class="overview-card">
+        <p class="overview-card-label">Likes</p>
+        <p class="overview-card-num">503</p>
+        <img src="./images/icon-twitter.svg" alt="" class="social-icon overview-icon">
+        <p class="overview-percent green">553%</p>
+      </div>
+      <div class="overview-card">
+        <p class="overview-card-label">Likes</p>
+        <p class="overview-card-num">107</p>
+        <img src="./images/icon-youtube.svg" alt="" class="social-icon overview-icon">
+        <p class="overview-percent red">19%</p>
+      </div>
+      <div class="overview-card">
+        <p class="overview-card-label">Total Views</p>
+        <p class="overview-card-num">1407</p>
+        <img src="./images/icon-youtube.svg" alt="" class="social-icon overview-icon">
+        <p class="overview-percent red">12%</p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js "></script>
+</body>
+</html>
