@@ -1,0 +1,218 @@
+@media (max-width: 75em) {
+    html {
+      font-size: 57%;
+    }
+    .ovarlay-cart {
+      right: 0;
+    }
+  }
+  @media (max-width: 62em) {
+    html {
+      font-size: 51%;
+    }
+  }
+  @media (max-width: 56em) {
+    html {
+      font-size: 46%;
+    }
+  }
+  @media (max-width: 50em) {
+    html {
+      font-size: 42%;
+    }
+  }
+  @media (max-width: 45em) {
+    html {
+      font-size: 62.5%;
+    }
+    /* header */
+    header > .center {
+      border: none;
+    }
+    .header-logo {
+      display: flex;
+      gap: 1.6rem;
+    }
+    .icon-menu {
+      display: inline-block;
+      transform: translateY(35%);
+      height: 1.4rem;
+    }
+  
+    .header-content img {
+      width: 12rem;
+      height: 1.9rem;
+    }
+    .main-nav-list {
+      position: absolute;
+      height: 100vh;
+      top: -2rem;
+      padding-left: 6rem;
+      gap: 3rem;
+      background-color: #fff;
+      z-index: 200;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: start;
+  
+      /* create animation: ; */
+      transform: translateX(-10rem);
+      width: 0rem;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+    .open {
+      transform: translateX(0rem);
+      width: 25rem;
+      /* width: 0rem; */
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      /* transition: all 0.3s; */
+    }
+    .cross-icon {
+      display: inline-block;
+      width: 2rem;
+      margin-top: 2.5rem;
+      margin-bottom: 5.4rem;
+    }
+    .main-nav-link:link,
+    .main-nav-link:visited {
+      font-weight: bold;
+      color: var(--dk-blue);
+      font-size: 1.8rem;
+      text-align: start;
+    }
+    .header-logo-box {
+      gap: 1.8rem;
+    }
+    .h-logo {
+      width: 2rem;
+    }
+    .ovarlay-cart {
+      right: 2%;
+    }
+    .product-number {
+      font-size: 1rem;
+      padding: 1px 5px;
+      right: -10px;
+      top: -8px;
+    }
+    .header-logo-box img {
+      width: 3rem;
+      height: 3rem;
+    }
+    /* hero */
+    .hero {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      padding: 0;
+    }
+    .hero-img-box {
+      /* visibility: hidden; */
+      display: none;
+    }
+    .operation-content-box .active {
+      display: none;
+    }
+    .main-ovarlay {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      width: 100%;
+      height: 32rem;
+      background-color: transparent;
+      top: 7rem;
+      /* align-items: flex-start; */
+      display: block;
+    }
+    .hero-slider {
+      width: 37.5rem;
+      height: 30rem;
+    }
+    .slider {
+      height: 30rem;
+    }
+    .slide {
+      height: 30rem;
+    }
+    .slider-delete {
+      display: none;
+    }
+    .ovarlay-operation-tab-box {
+      display: none;
+    }
+    .slider__btn {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+    .slider__btn--left {
+      left: 10%;
+    }
+    .slider__btn--right {
+      right: 10%;
+    }
+    .btn-right {
+      width: 1.1rem;
+    }
+  
+    /* hero text box */
+    .hero-text-box {
+      position: relative;
+      top: 26rem;
+      padding: 2rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1.6rem;
+    }
+    .headings-primary {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+    .description {
+      line-height: 1.4;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .price-section {
+      margin-bottom: 2.5rem;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .price {
+      font-size: 2.4rem;
+    }
+    .btn-list {
+      grid-template-columns: 1fr;
+    }
+    .number-box {
+      padding: 1.5rem;
+    }
+    .btn {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (max-width: 23em) {
+    html {
+      font-size: 54%;
+    }
+  }
+  @media (max-width: 20em) {
+    html {
+      font-size: 45%;
+    }
+  }
+  @media (max-width: 18em) {
+    html {
+      font-size: 40%;
+    }
+  }
+  @media (max-width: 15em) {
+    html {
+      font-size: 30%;
+    }
+  }

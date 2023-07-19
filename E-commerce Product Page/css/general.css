@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --main-color: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    --dk-blue: hsl(220, 13%, 13%);
+    --dg-blue: hsl(219, 9%, 45%);
+    --gk-blue: hsl(220, 14%, 75%);
+    --lk-blue: hsl(223, 64%, 98%);
+    --text-white: hsl(0, 9%, 100%);
+    --black-color: hsl(0, 0%, 0%);
+  }
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    font-family: "Kumbh Sans", sans-serif;
+  }
+  
+  p {
+    font-size: 1.6rem;
+  }
+  .container {
+    max-width: 107rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid {
+    display: grid;
+  }
+  .grid-1-cols {
+    grid-template-columns: 1fr;
+  }
+  .grid-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  button:hover,
+  .product-image-small:hover,
+  .delete-icon:hover {
+    cursor: pointer;
+  }
+  
+  .show {
+    display: block !important;
+  }
+  /*
+  # Front-end Style Guide
+  
+  ## Layout
+  
+  The designs were created to the following widths:
+  
+  - Mobile: 375px
+  - Desktop: 1440px
+  
+  ## Colors
+  
+  ### Primary
+  
+  - Orange: hsl(26, 100%, 55%)
+  - Pale orange: hsl(25, 100%, 94%)
+  
+  ### Neutral
+  
+  - Very vark blue: hsl(220, 13%, 13%)
+  - Dark grayish blue: hsl(219, 9%, 45%)
+  - Grayish blue: hsl(220, 14%, 75%)
+  - Light grayish blue: hsl(223, 64%, 98%)
+  - White: hsl(0, 0%, 100%)
+  - Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%)
+  
+  ## Typography
+  
+  ### Body Copy
+  
+  - Font size (paragraph): 16px
+  
+  ### Font
+  
+  - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+  - Weights: 400, 700
+  */
