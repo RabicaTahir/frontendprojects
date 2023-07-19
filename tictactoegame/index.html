@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tic Tac Toe Game">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <main class="main">
+
+        <section id="gameMenu" class="gameMenu">
+            <img src="./assets/logo.svg" alt="logo">
+            <div class="choose-mark flex">
+                <h1 class="fs-600 uppercase">Pick player 1's mark</h1>
+                <div class="mark-container flex">
+
+                    <label class="labels" for="X-mark">
+                        <input class="radio" type="radio" id="X-mark" name="marks" value="X" checked>
+                            <span class="checkmark">
+                                <svg class="Xsvg" width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path class="XsvgPath" d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="hsl( var(--clr-silver) )"/>
+                                </svg>
+                            </span>
+                    </label>
+
+                    <label class="labels" for="O-mark">
+                        <input class="radio" type="radio" id="O-mark" name="marks" value="O">
+                            <span class="checkmark">
+                                <svg class="Osvg" width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path class="OsvgPAth" d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z" fill="hsl( var(--clr-silver) )"/>
+                                </svg>
+                            </span>
+                    </label>
+
+                </div>
+                <p class="fs-500 uppercase text-silver">Remember: X goes first</p>
+            </div>
+            <button id="cpuBtn" class="fs-700 text-dark uppercase d-block cpuBtn" onclick="newGameCPU()" data-value="">New Game (vs CPU)</button>
+            <button id="playerBtn" class="fs-700 text-dark uppercase d-block playerBtn" onclick="newGamePlayer()" data-value="">New Game (vs player)</button>
+        </section>
+
+        <section id="gameBoard" class="gameBoard">
+
+            <div class="game-board-header flex">
+                <img class="game-board-header-logo" src="./assets/logo.svg" alt="logo">
+                <div class="turn">
+                    <img id="turn" class="Xturn" src="./assets/icon-x-turn.svg" alt="X icon" data-value="X">
+                    <p class="fs-500 uppercase">turn</p>
+                </div>
+                <button class="restart" onclick="displayModalRestart()"><img src="./assets/icon-restart.svg" alt="restart icon"></button>
+            </div>
+
+            <div class="boxes">
+                <div onclick="hitBox('0')" id="0" class="box box0 hoverClassX" data-value=""></div>
+                <div onclick="hitBox('1')" id="1" class="box box1 hoverClassX" data-value=""></div>
+                <div onclick="hitBox('2')" id="2" class="box box2 hoverClassX" data-value=""></div>
+                <div onclick="hitBox('3')" id="3" class="box box3 hoverClassX" data-value=""></div>
+                <div onclick="hitBox('4')" id="4" class="box box4 hoverClassX" data-value=""></div>
+                <div onclick="hitBox('5')" id="5" class="box box5 hoverClassX" data-value=""></div>
+                <div onclick="hitBox('6')" id="6" class="box box6 hoverClassX" data-value=""></div>
+                <div onclick="hitBox('7')" id="7" class="box box7 hoverClassX" data-value=""></div>
+                <div onclick="hitBox('8')" id="8" class="box box8 hoverClassX" data-value=""></div>
+            </div>
+
+            <div class="scores fs-500 uppercase text-dark">
+                <div class="box-score your-score">
+                    <p id="player1Name" class="fs-500 uppercase text-dark">X (You)</p>
+                    <p id="Xscore" class="fs-800">0</p>
+                </div>   
+                <div class="box-score ties">
+                    <p>Ties<br><span id="draw" class="fs-800">0</span></p>
+                </div>
+                <div class="box-score cpu-score">    
+                    <p id="player2Name" class="fs-500 uppercase text-dark">O (CPU)</p>
+                    <p id="Oscore" class="fs-800">0</p>
+                </div>
+            </div>
+
+            <div id="modal" class="modal">
+                <div id="endGameModal" class="endGameModal">
+                    <p id="winnerName" class="uppercase">Oh no, you lost...</p>
+
+                    <div class="flex">
+                        <img id="winner-mark" src="./assets/icon-o.svg" alt="winner-mark">
+                        <h2 id="winnerTakes" class="fs-900 uppercase">takes the round</h2>
+                    </div>
+
+                    <div>
+                        <button onclick="restartGame()" class="quitBtn fs-600 uppercase text-dark">Quit</button>
+                        <button onclick="nextRound()" class="nextBtn fs-600 uppercase text-dark">Next Round</button>
+                    </div>
+
+                </div>
+            
+                <div id="restartGame" class="restartGame">
+                    <p class="fs-900 uppercase">restart game?</p>
+                    <div>
+                        <button onclick="cancelReset()" class="cancelBtn fs-600 uppercase text-dark">No, cancel</button>
+                        <button onclick="restartGame()" class="restartBtn fs-600 uppercase text-dark">Yes, restart</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div id= "cpuThink" class="cpuThink">
+            <p id="cpuThinkMessage"></p>
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
