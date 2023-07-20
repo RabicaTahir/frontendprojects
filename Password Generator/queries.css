@@ -1,0 +1,80 @@
+@media (max-width: 36em) {
+    .container {
+      width: 91.6%;
+    }
+  
+    p {
+      font-size: 1.6rem;
+    }
+  
+    .password-display,
+    .password-placeholder {
+      font-size: 2.4rem;
+    }
+  
+    .password-field {
+      height: 64px;
+      margin-bottom: 1.6rem;
+    }
+  
+    .char-count {
+      font-size: 2.8rem;
+    }
+  
+    .strength-box {
+      height: 56px;
+    }
+  }
+  
+  @media (max-width: 27em) {
+    .password-settings {
+      padding: 2.4rem 1.6rem 3.2rem;
+    }
+    
+    .strength-rating-text {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (max-width: 24em) {
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 1.6rem;
+    }
+  
+    .password-settings {
+      padding: 1.6rem
+    }
+  
+    .char-length {
+      margin-bottom: 1.6rem;
+    }
+  
+    .char-length-slider {
+      height: 8px;
+      margin-bottom: 4.2rem;
+    }
+  
+    .char-count {
+      font-size: 2.4rem;
+    }
+  
+    .char-include-group {
+      gap: 1.6rem;
+      margin-bottom: 3.2rem;
+    }
+  
+    .strength-box {
+      margin-bottom: 1.6rem;
+      padding: 0 1.6rem;
+    }
+  
+    .strength-label {
+      font-size: 1.8rem;
+    }
+  
+    .generate-btn {
+      padding: 1.5rem 0;
+      font-size: 1.6rem;
+    }
+  }
