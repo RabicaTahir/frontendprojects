@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*, *::after, *::before{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family:'League Spartan', sans-serif;;
+  font-size: 16px;
+}
+
+:root{
+  /******************
+  *****Backgrounds***
+  ******************/
+
+--main-background: hsl(222, 26%, 31%);
+--toggle-keypad: hsl(223, 31%, 20%);
+--bg-screen: hsl(224, 36%, 15%);
+
+/***************
+******Keys******
+****************/
+
+--key-background: hsl(225, 21%, 49%);
+--key-shadow: hsl(224, 28%, 35%);
+--key-bgtoggle: hsl(6, 63%, 50%);
+--key-result: hsl(6, 70%, 34%);
+--key-bg2: hsl(30, 25%, 89%);
+--key-shadow2: hsl(28, 16%, 65%);
+
+/************
+****Text*****
+*************/
+
+--text-col: hsl(221, 14%, 31%);
+--text-col2: hsl(0, 0%, 100%);
+}
+
+body{
+  height: 100vh;
+  background: var(--main-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+label, h6{
+  color: var(--text-col2);
+  left: 150px;
+  font-size: 0.8rem;
+  position: relative;
+}
+.calculator{
+  display: flex;
+  flex-direction: column;
+  width: 18.75rem;
+  margin: auto;
+  align-items: center;
+}
+.header{
+  display: flex;
+  margin: 50px 0px 10px;
+  position: relative;
+}
+
+
+.header >  h1{
+  color: var(--key-bg2);
+  position: absolute;
+  left: -10rem;
+  top: -0.1rem;
+  font-size: 1.6rem;
+}
+.header > h6{
+  align-self: center;
+}
+.input{
+  background-color: var(--toggle-keypad);
+  position: relative;
+  border-radius: 30rem;
+  left: 160px;
+  height: 1.5rem;
+  width: 4rem;
+}
+[id="style1"],[id="style2"],[id="style3"]{
+appearance: none;
+position: absolute;
+width: 1rem;
+height: 1rem;
+border-radius: 3rem;
+top: 0.25rem;
+transition: 0.5s;
+cursor: pointer;
+}
+
+[id="style1"] { 
+  left: 0.313rem;
+}
+
+[id="style2"] {
+  left: 1.663rem;
+}
+
+[id="style3"] {
+  left: 2.875rem;
+}
+input:checked{
+  background-color: var(--key-result);
+}
+label{
+  top: -1rem;
+}
+label[for="style1"]{
+  left:0.5rem;
+}
+label[for="style2"]{
+  left:1.4rem;
+}
+label[for="style3"]{
+  left:2.1rem;
+}
+.user-inputs{
+  background-color: var(--bg-screen);
+  width: 27rem;
+  height: 7rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+.user-inputs > .previous-operand{
+  font-size: 2.5rem;
+}
+.user-inputs > .current-operand{
+  font-size: 2.5rem;
+}
+.container{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 6.4rem);
+  grid-template-rows: repeat(5, 5.75rem);
+  background-color: var(--toggle-keypad);
+  padding: 0.9rem 0.625rem;
+  border-radius: 1rem;
+}
+.container > button{
+  padding:  0.8rem 0rem;
+  margin: 0rem 0.4rem;
+  background-color: var(--key-bg2);
+  box-shadow: 0 0.3rem var(--key-shadow2);
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.btn{
+  grid-column: span 2;
+}
+button:nth-child(17), button:nth-child(4){
+  background-color: var(--key-background);
+  color: var(--key-bg2);
+  box-shadow: 0 0.3rem var(--key-shadow);
+  font-size: 1rem;
+  padding: 1.3rem 0;
+}
+button:nth-child(18){
+  background-color: var(--key-bgtoggle);
+  color: var(--key-bg2);
+  box-shadow: 0 0.3rem var(--key-result);
+  font-size: 1rem;
+  padding: 1.3rem 0;
+}
+
+
+
+
+
+
+
+
+
+

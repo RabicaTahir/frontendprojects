@@ -1,0 +1,23 @@
+@media screen and (width:375px) {
+    body {
+      height: 85vh;
+  }
+    .header >  h1 {
+      left: -7rem;
+  }
+  label, h6 {
+    left: 110px;
+  }
+  .input {
+    left: 120px;
+   
+  }
+  .user-inputs {
+    width: 22rem;
+    height: 6rem;
+  }
+  .container {
+    grid-template-columns: repeat(4, 5.2rem);
+    grid-template-rows: repeat(5, 4.95rem);
+  }
+  }

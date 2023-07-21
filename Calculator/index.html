@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href=" ">
+    <!-- Javascript -->
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <main class="calculator">
+        <div class="header">
+            <h1>calc</h1>
+            <h6>THEME</h6>
+            <div class="three-points">
+                <div class="input">
+                    <input type="radio" name="style" id="style1" value="0" checked>
+                    <label for="style1">1</label>
+
+                    <input type="radio" name="style" value="1" id="style2">
+                    <label for="style2">2</label>
+
+                    <input type="radio" name="style" value="2" id="style3">
+                    <label for="style3">3</label>
+                </div>
+            </div>
+        </div>
+        <div class="user-inputs">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+        </div>
+        <div class="container">
+            <button data-num>7</button>
+            <button data-num>8</button>
+            <button data-num>9</button>
+            <button data-delete>DEL</button>
+            <button data-num>4</button>
+            <button data-num>5</button>
+            <button data-num>6</button>
+            <button data-operator>+</button>
+            <button data-num>1</button>
+            <button data-num>2</button>
+            <button data-num>3</button>
+            <button data-operator>-</button>
+            <button data-operator="">.</button>
+            <button data-num>0</button>
+            <button data-operator>/</button>
+            <button data-operator>X</button>
+            <button data-reset class="btn">RESET</button>
+            <button data-output class="btn">=</button>
+        </div>
+    </main>
+</body>
+</html>
