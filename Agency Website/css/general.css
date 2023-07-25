@@ -1,0 +1,133 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;800&display=swap");
+
+/* VARIABLES CSS */
+:root {
+  /* colors */
+  --color-red: #f94f4f;
+  --color-bgBlack: #191921;
+  --color-white: #ffffff;
+  --color-textBlack: #000000;
+
+  /* font-size */
+  --font-xl: 5rem;
+  --font-l: 3.5rem;
+  --font-m: 1.25rem;
+  --font-body: 1.125rem;
+
+  /* font weight */
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-extraBold: 800;
+}
+
+/* TYPOGRAPHY */
+.font-h1 {
+  font: var(--fw-extraBold) var(--font-xl) / 88px "Commissioner";
+}
+
+.font-h2 {
+  font: var(--fw-extraBold) var(--font-l) / 1.14 "Commissioner";
+}
+
+.font-h3 {
+  font: var(--fw-extraBold) var(--font-m) / 1.6 "Commissioner";
+}
+
+.font-body {
+  font: var(--fw-regular) var(--font-body) / 1.78 "Commissioner";
+}
+
+.btn-font {
+  font: var(--fw-extraBold) 1rem/1.25 "Commissioner";
+}
+
+/* Reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus,
+*:focus-visible {
+  outline: #646464 solid 4px;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+button,
+[type="button"] {
+  -webkit-appearance: button;
+  text-transform: none;
+  overflow: visible;
+}
+
+.sr-only {
+  position: absolute !important;
+  margin: -1px !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-white);
+  line-height: 1.5;
+
+  /* improves text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container {
+  max-width: 74.375rem;
+  padding: 0 2.5rem;
+  margin: 0 auto;
+}
+
+/* css reusable */
+.grid-layout {
+  display: grid;
+}
+
+.grid-area {
+  grid-area: 1 / 1;
+}
