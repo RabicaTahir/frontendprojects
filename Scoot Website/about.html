@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoot – About</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5225b7dab1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="assets/icons/hamburger.svg"
+        alt="nav-toggle"
+        class="header__nav-toggle"
+      />
+      <a href="/">
+        <img src="assets/logo.svg" alt="logo" class="logo header__logo" />
+      </a>
+      <div class="header__navigation">
+        <div class="header__nav-list">
+          <a href="about.html" class="header__nav-link">About</a>
+          <a href="locations.html" class="header__nav-link">Location</a>
+          <a href="careers.html" class="header__nav-link">Careers</a>
+          <a href="#cta" class="btn header__btn">Get Scootin</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-heading">
+      <picture>
+        <source
+          srcset="assets/images/about-hero-tablet.jpg"
+          media="(max-width: 1100px) and (min-width: 601px)"
+        />
+        <source
+          srcset="assets/images/about-hero-mobile.jpg"
+          media="(max-width: 600px)"
+        />
+        <img
+          alt="careers-location"
+          src="assets/images/about-hero-desktop.jpg"
+          class="page-heading__bg"
+        />
+      </picture>
+      <div class="page-heading__container">
+        <h1 class="heading-1 page-heading__heading">About</h1>
+        <img
+          src="assets/patterns/white-circles.svg"
+          alt="circles"
+          class="page-heading__circles"
+        />
+      </div>
+    </section>
+
+    <main>
+      <section class="image-text-row image-text-row--right low-spacing">
+        <div class="image-text-row__img-container">
+          <img
+            class="image-text-row__img"
+            src="assets/images/digital-era.jpg"
+            alt="digital-era"
+          />
+          <img
+            src="assets/patterns/circle.svg"
+            alt="circle"
+            class="image-text-row__circle"
+          />
+          <img
+            src="assets/patterns/left-upward-arrow.svg"
+            alt="arrow"
+            class="image-text-row__arrow image-text-row__arrow--long image-text-row__arrow--upward"
+          />
+        </div>
+        <div class="image-text-row__content">
+          <h2 class="heading-2 mb-sm image-text-row__heading">
+            Mobility for the digital era
+          </h2>
+          <p class="image-text-row__text">
+            Getting around should be simple (and even fun!) for everyone. We
+            embrace technology to provide low cost, smart access to scooters at
+            your fingertips.
+          </p>
+        </div>
+      </section>
+
+      <section class="image-text-row image-text-row--left low-spacing">
+        <div class="image-text-row__img-container">
+          <img
+            class="image-text-row__img"
+            src="assets/images/better-living.jpg"
+            alt="better-living"
+          />
+          <img
+            src="assets/patterns/circle.svg"
+            alt="circle"
+            class="image-text-row__circle"
+          />
+          <img
+            src="assets/patterns/left-upward-arrow.svg"
+            alt="arrow"
+            class="image-text-row__arrow image-text-row__arrow--long-mobile"
+          />
+        </div>
+        <div class="image-text-row__content">
+          <h2 class="heading-2 mb-sm image-text-row__heading">
+            Better urban living
+          </h2>
+          <p class="image-text-row__text">
+            We’re helping connect cities and bring people closer together. Our
+            scooters are also fully-electric and we offset the minimal carbon
+            footprint for each ride.
+          </p>
+        </div>
+      </section>
+
+      <section class="features">
+        <h2 class="heading-2 section-heading features__heading">Our Values</h2>
+
+        <div class="features__row">
+          <div class="features__item">
+            <div class="features__img-container">
+              <img
+                src="assets/images/our-tech.jpg"
+                alt="our-tech"
+                class="features__img"
+              />
+              <h4 class="heading-4 features__number">01</h4>
+            </div>
+            <h4 class="heading-4 features__title">Our tech</h4>
+            <p class="features__text">
+              We’re using cutting edge technology to drive accessible urban
+              transportation forward. Our fully electric scooters are a joy to
+              ride!
+            </p>
+          </div>
+
+          <div class="features__item">
+            <div class="features__img-container">
+              <img
+                src="assets/images/our-integrity.jpg"
+                alt="our-integrity"
+                class="features__img"
+              />
+              <h4 class="heading-4 features__number">02</h4>
+            </div>
+            <h4 class="heading-4 features__title">Our integrity</h4>
+            <p class="features__text">
+              We are fully committed to deliver a great yet safe, sustainable
+              micro-mobility experience in every city we serve.
+            </p>
+          </div>
+
+          <div class="features__item">
+            <div class="features__img-container">
+              <img
+                src="assets/images/our-community.jpg"
+                alt="our-community"
+                class="features__img"
+              />
+              <h4 class="heading-4 features__number">03</h4>
+            </div>
+            <h4 class="heading-4 features__title">Our community</h4>
+            <p class="features__text">
+              We support every community we serve. All workers are paid a living
+              wage based on their location and are Scoot employees.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <h2 class="heading-2 section-heading faq__heading">FAQs</h2>
+
+        <div class="faq__section">
+          <h3 class="heading-3 faq__section-title">How it works</h3>
+          <div class="accordion faq__list">
+            <div class="accordion__item">
+              <div class="accordion__top">
+                <h4 class="heading-4 accordion__title">
+                  How do I download the app?
+                </h4>
+                <img
+                  src="assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="accordion__icon"
+                />
+              </div>
+              <p class="accordion__content">
+                To download the Scoot app, you can search “Scoot” in both the
+                App and Google Play stores. An even simpler way to do it would
+                be to click the relevant link at the bottom of this page and
+                you’ll be re-directed to the correct page.
+              </p>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__top">
+                <h4 class="heading-4 accordion__title">
+                  Can I find a nearby Scoots?
+                </h4>
+                <img
+                  src="assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="accordion__icon"
+                />
+              </div>
+              <p class="accordion__content">
+                Definitely! Simply open up the app and allow us to find your
+                location while using it. We'll show you all of the closest
+                Scoots and some extra useful information.
+              </p>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__top">
+                <h4 class="heading-4 accordion__title">
+                  Do I need a license to ride?
+                </h4>
+                <img
+                  src="assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="accordion__icon"
+                />
+              </div>
+              <p class="accordion__content">
+                Yup! We provide information inside the app regarding local laws
+                and the license you need to be able to ride our Scoots.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__section">
+          <h3 class="heading-3 faq__section-title">Safe driving</h3>
+          <div class="accordion faq__list">
+            <div class="accordion__item">
+              <div class="accordion__top">
+                <h4 class="heading-4 accordion__title">
+                  Should I wear a helmet?
+                </h4>
+                <img
+                  src="assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="accordion__icon"
+                />
+              </div>
+              <p class="accordion__content">
+                Yes, please do! All cities have different laws. But we strongly
+                strongly strongly recommend always wearing a helmet regardless
+                of the local laws. We like you and we want you to be as safe as
+                possible while Scooting.
+              </p>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__top">
+                <h4 class="heading-4 accordion__title">
+                  How about the rules & regulations?
+                </h4>
+                <img
+                  src="assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="accordion__icon"
+                />
+              </div>
+              <p class="accordion__content">
+                Now is not the time to be a rule breaker. Be sure you're
+                complying with all local laws and regulations. Also, just be a
+                good human being. Be sure not to park your Scoot where it can
+                block access to buildings or get in people's way.
+              </p>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__top">
+                <h4 class="heading-4 accordion__title">
+                  What if I damage my Scoot?
+                </h4>
+                <img
+                  src="assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="accordion__icon"
+                />
+              </div>
+              <p class="accordion__content">
+                Be sure to read our terms and conditions carefully. Not the most
+                fun job we know but we make it as clear as possible. There's an
+                option to add insurance for each trip, or you can sign up for
+                annual insurance if you're a regular Scooter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="cta" id="cta">
+      <h2 class="heading-2 cta__text">Sign up and Scoot off today</h2>
+      <div class="cta__download">
+        <a href="#cta" class="cta__download-link">
+          <div class="cta__download-button cta__download-button--apple">
+            <i class="cta__download-icon fab fa-apple"></i>
+            <div class="cta__download-text">
+              <p>Available on the</p>
+              <p>AppStore</p>
+            </div>
+          </div>
+        </a>
+        <a href="#cta" class="cta__download-link">
+          <div class="cta__download-button cta__download-button--google">
+            <i class="cta__download-icon fab fa-google-play"></i>
+            <div class="cta__download-text">
+              <p>Get it on</p>
+              <p>GooglePlay</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <img
+        class="cta__pattern"
+        src="assets/patterns/semi-circles.svg"
+        alt="semi-circles"
+      />
+    </section>
+
+    <footer class="footer">
+      <a href="/">
+        <img src="assets/logo-white.svg" alt="logo" class="logo footer__logo" />
+      </a>
+      <div class="footer__nav">
+        <a href="about.html" class="footer__nav-link">About</a>
+        <a href="locations.html" class="footer__nav-link">Location</a>
+        <a href="careers.html" class="footer__nav-link">Careers</a>
+      </div>
+      <div class="footer__social">
+        <a href="#cta" class="footer__social-link">
+          <svg class="footer__social-icon">
+            <use xlink:href="assets/icons/facebook.svg#icon"></use>
+          </svg>
+        </a>
+        <a href="#cta" class="footer__social-link">
+          <svg class="footer__social-icon footer__social-icon--small">
+            <use xlink:href="assets/icons/twitter.svg#icon"></use>
+          </svg>
+        </a>
+        <a href="#cta" class="footer__social-link">
+          <svg class="footer__social-icon">
+            <use xlink:href="assets/icons/instagram.svg#icon"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
