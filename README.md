@@ -9,6 +9,3 @@
 
 <h4> 💌 Feel free to reach out to me on Instagram: @codewithart, where we can share ideas and embark on coding adventures together! 📲💬 </h4>
 
-<h4> Join me on this celestial journey of web development as we create wonders that touch hearts and leave a trail of stardust in every line of code. 🌠🖌️ </h4>
-
-<h4> Let's shoot for the stars and make the web a more mesmerizing and delightful place! 🌟🌈🌏 </h4>
