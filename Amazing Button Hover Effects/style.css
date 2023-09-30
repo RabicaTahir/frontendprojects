@@ -1,0 +1,89 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+button {
+    font-weight: 600;
+    border: solid 2px black;
+    outline: 0;
+    padding: 1rem 4rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.08rem;
+    background-color: white;
+    border-radius: 0.35rem;
+    position: relative;
+    cursor: pointer;
+}
+button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    z-index: -1;
+    border-radius: 0.35rem;
+    border: solid 2px black;
+    transition: all 0.3s ease-in-out;
+}
+button.style-1::after {
+    width: 90%;
+    height: 90%;
+}
+button.style-1:hover::after {
+    width: 100%;
+    height: 100%;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+button.style-2::after {
+    top: 0.5rem;
+    left: 0.5rem;
+}
+button.style-2:hover::after {
+    width: calc(100% + 0.5rem);
+    height: calc(100% + 0.5rem);
+}
+button.style-3::after {
+    border: 0;
+    box-shadow: 0px 0px 0px 2px black;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+button.style-3:hover::after {
+    top: -0.5rem;
+    left: -0.5rem;
+    width: calc(100% + 0.5rem * 2);
+    height: calc(100% + 0.5rem * 2);
+}
+button.style-4::after {
+    border: 0;
+    box-shadow: 0px 0px 0px 2px black;
+    width: calc(100%);
+    height: calc(100%);
+}
+button.style-4:hover::after {
+    top: -0.5rem;
+    left: -0.5rem;
+    width: calc(100% + 0.5rem * 2);
+    height: calc(100% + 0.5rem * 2);
+}
+button.style-5::after {
+    border: 0;
+    box-shadow: 0px 0px 0px 2px black;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+button.style-5:hover {
+    background-color: pink;
+}
+button.style-5:hover::after {
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+}
