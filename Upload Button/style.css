@@ -1,0 +1,100 @@
+  body {
+    align-items: center;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+  .utveckling {
+    animation: Utveckling 6.5s infinite;
+    stroke-width: 10;
+    fill: none;
+    stroke: #5f7cfb;
+  }
+  .pil {
+    animation: Pil 6.5s infinite;
+  }
+  .bock {
+    animation: Bock 6.5s infinite;
+    fill: none;
+    stroke-dasharray: 31 82;
+    stroke-dasharray: none;
+    stroke-dashoffset: -47px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 4;
+    stroke-width: 4;
+    stroke: #ffffff;
+  }
+  @keyframes Pil {
+    0% {
+      transform: translateY(0);
+    }
+    6% {
+      transform: translateY(-65px);
+    }
+    62.49% {
+      transform: translateY(-65px);
+    }
+    62.5% {
+      transform: translateY(65px);
+    }
+    68.5% {
+      transform: translateY(0px);
+    }
+  }
+  @keyframes Utveckling {
+    0% {
+      stroke-width: 10;
+    }
+    3.1% {
+      stroke-width: 10;
+      stroke-dasharray: 1 179;
+    }
+    3.6% {
+      stroke-width: 25;
+      stroke-dasharray: 1 179;
+    }
+    28% {
+      stroke-width: 25;
+      stroke-dasharray: 174 179;
+    }
+    34% {
+      stroke-width: 10;
+      stroke-dasharray: 179 179;
+    }
+    100% {
+      stroke-width: 10;
+      stroke-dasharray: 179 179;
+    }
+  }
+  @keyframes Bock {
+    0% {
+      stroke-dasharray: 1 82;
+      stroke-dashoffset: 0px;
+    }
+    29% {
+      stroke-dasharray: 1 82;
+      stroke-dashoffset: 0px;
+    }
+    35% {
+      stroke-dasharray: 31 82;
+      stroke-dashoffset: -50px;
+    }
+    62% {
+      stroke-dasharray: 31 82;
+      stroke-dashoffset: -50px;
+      transform: translateY(0px);
+    }
+    68% {
+      stroke-dasharray: 31 82;
+      stroke-dashoffset: -50px;
+      transform: translateY(-65px);
+    }
+    100% {
+      stroke-dasharray: 31 82;
+      stroke-dashoffset: -50px;
+      transform: translateY(-65px);
+    }
+  }
+  
